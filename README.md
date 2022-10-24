@@ -8,17 +8,99 @@ Assim como a documentação do JSON-Server-Auth traz (https://www.npmjs.com/pack
 
 ### Cadastro
 
-POST /register <br/>
-POST /signup <br/>
-POST /users
+GET /users <br>
+Unauthorized
 
-Qualquer um desses 3 endpoints irá cadastrar o usuário na lista de "Users", sendo que os campos obrigatórios são os de email e password.
-Você pode ficar a vontade para adicionar qualquer outra propriedade no corpo do cadastro dos usuários.
+POST /users <br>
+format:
+{
+"email": "admin@admin.com",
+"password": "admin"
+}
 
+response:
+{
+"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImlhdCI6MTY2NjY1MjQzMiwiZXhwIjoxNjY2NjU2MDMyLCJzdWIiOiIxIn0.GvtoWN2hhh9h8KRqt8Tz5a0Hbz5k3ICXeuwr1Dq4FPw",
+"user": {
+"email": "admin@admin.com",
+"id": 1
+}
+}
 
 ### Login
 
 POST /login <br/>
-POST /signin
+format:
+{
+"email": "admin@admin.com",
+"password": "admin"
+}
+response:
+{
+"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImlhdCI6MTY2NjY1MjQzMiwiZXhwIjoxNjY2NjU2MDMyLCJzdWIiOiIxIn0.GvtoWN2hhh9h8KRqt8Tz5a0Hbz5k3ICXeuwr1Dq4FPw",
+"user": {
+"email": "admin@admin.com",
+"id": 1
+}
+}
 
-Qualquer um desses 2 endpoints pode ser usado para realizar login com um dos usuários cadastrados na lista de "Users"
+### Projects
+
+GET /projects <br>
+Only needs authorization header, returns all projects
+
+response:
+[
+{
+"title": "Portfolio",
+"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse enim tortor, feugiat et risus et, mattis porttitor nunc. Mauris tincidunt sed arcu in suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed fermentum metus. Etiam in pretium odio, ut elementum nisl. Nam at hendrerit lectus, eget ornare ligula. Maecenas et nisi vitae mauris rhoncus mollis. Suspendisse vulputate tortor ut mi congue consequat. Suspendisse consectetur tincidunt nisi, quis ultrices turpis hendrerit et. Suspendisse eget sapien nibh. Duis viverra tincidunt enim, eu euismod dui bibendum id. Suspendisse in euismod nisi. Fusce est nulla, ultricies a ligula eu, finibus feugiat felis.",
+"url": "localhost:3000",
+"userId": "1",
+"id": 1
+}
+]
+
+POST /projects
+format:
+{
+"title": "Título",
+"content": "Descrição do Projeto",
+"url" : "link do projeto",
+"userId": "1"
+}
+
+response:
+{
+"title": "Título",
+"content": "Descrição do Projeto",
+"url": "link do projeto",
+"userId": "1",
+"id": 2
+}
+
+### Tasks
+
+GET /tasks
+response:
+[{
+"project": "Kenzie Hub",
+"currentTask": "Task",
+"userId": "2",
+"id": 2
+}]
+
+POST /tasks
+format:
+{
+"project": "Kenzie Hub",
+"currentTask": "arrumar a adição da tecnologia",
+"userId": "1"
+}
+
+response:
+{
+"project": "Kenzie Hub",
+"currentTask": "arrumar a adição da tecnologia",
+"userId": "1",
+"id": 1
+}
