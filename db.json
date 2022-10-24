@@ -1,11 +1,63 @@
 {
-  "users": [
-    {
-      "email": "kenzinho@mail.com",
-      "password": "$2a$10$YQiiz0ANVwIgpOjYXPxc0O9H2XeX3m8OoY1xk7OGgxTnOJnsZU7FO",
-      "name": "Kenzinho",
-      "age": 38,
-      "id": 1
-    }
-  ]
+	"users": [
+		{
+			"email": "admin@admin.com",
+			"password": "$2a$10$7f1Tyio.OOJG6ZFPEXQp5u.DWopibKLFWhgwKI2YjO/XzNAYGw6RG",
+			"id": 1
+		},
+		{
+			"email": "eevee@gmail.com",
+			"password": "$2a$10$83NRhSU6XEwXYsmCH.eR2erYMbmbjdp5FlOQk8eGqaZE8o1AvM7Va",
+			"id": 2
+		}
+	],
+	"projects": [
+		{
+			"title": "Portfolio",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse enim tortor, feugiat et risus et, mattis porttitor nunc. Mauris tincidunt sed arcu in suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed fermentum metus. Etiam in pretium odio, ut elementum nisl. Nam at hendrerit lectus, eget ornare ligula. Maecenas et nisi vitae mauris rhoncus mollis. Suspendisse vulputate tortor ut mi congue consequat. Suspendisse consectetur tincidunt nisi, quis ultrices turpis hendrerit et. Suspendisse eget sapien nibh. Duis viverra tincidunt enim, eu euismod dui bibendum id. Suspendisse in euismod nisi. Fusce est nulla, ultricies a ligula eu, finibus feugiat felis.",
+			"url": "localhost:3000",
+			"userId": "1",
+			"id": 1
+		},
+		{
+			"title": "Kenzie Hub",
+			"content": "Phasellus finibus ligula nec felis placerat, id ultricies eros sollicitudin. Praesent ut eros et enim luctus luctus ornare vel velit. Donec id lobortis libero. Nam venenatis rutrum est nec consequat. Ut in fermentum erat. Aliquam laoreet lacus ut ex cursus, non luctus justo volutpat. Suspendisse eu diam mauris. Nullam dictum, velit sit amet egestas iaculis, mauris ipsum efficitur odio, non sagittis leo mauris sed dolor. Quisque blandit nisl non eros venenatis pretium. Sed quis libero eget risus aliquet fringilla. Vestibulum erat urna, ornare vitae malesuada at, pellentesque quis mi. Phasellus commodo magna id gravida venenatis. Vivamus nec accumsan sapien.",
+			"url": "localhost:2157",
+			"userId": "1",
+			"id": 2
+		},
+		{
+			"title": "Kenzie Hub",
+			"content": "Descrição do projeto",
+			"url": "base_url",
+			"userId": "2",
+			"id": 3
+		}
+	],
+	"tasks": [
+		{
+			"project": "Kenzie Hub",
+			"currentTask": "arrumar a adição da tecnologia",
+			"userId": "1",
+			"id": 1
+		},
+		{
+			"project": "Kenzie Hub",
+			"currentTask": "Task",
+			"userId": "2",
+			"id": 2
+		},
+		{
+			"project": "Capstone",
+			"currentTask": "Task",
+			"userId": "2",
+			"id": 3
+		},
+		{
+			"project": "Nu Kenzie",
+			"currentTask": "Task",
+			"userId": "2",
+			"id": 4
+		}
+	]
 }
